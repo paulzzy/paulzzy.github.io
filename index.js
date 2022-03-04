@@ -45,7 +45,7 @@ const drawGrid = () => {
         const right = (CELL_SIZE_PX + 1) * width + 1;
 
         context.moveTo(0, currentRow);
-        context.moveTo(right, currentRow);
+        context.lineTo(right, currentRow);
     }
 
     context.stroke();
