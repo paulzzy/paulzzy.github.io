@@ -1,5 +1,5 @@
 import { Universe, Cell } from "wasm-game-of-life";
-import { memory } from "wasm-game-of-life/wasm_game_of_life_bg"
+import { memory } from "wasm-game-of-life/wasm_game_of_life_bg";
 
 const CELL_SIZE_PX = 10;
 const GRID_COLOR = "#CCCCCC";
@@ -67,9 +67,15 @@ const drawCells = () => {
             const currentCol = col * (CELL_SIZE_PX + 1) + 1;
             const currentRow = row * (CELL_SIZE_PX + 1) + 1;
 
-            context.fillStyle = cells[index] === Cell.Alive ? ALIVE_COLOR : DEAD_COLOR;
+            context.fillStyle =
+                cells[index] === Cell.Alive ? ALIVE_COLOR : DEAD_COLOR;
 
-            context.fillRect(currentCol, currentRow, CELL_SIZE_PX, CELL_SIZE_PX);
+            context.fillRect(
+                currentCol,
+                currentRow,
+                CELL_SIZE_PX,
+                CELL_SIZE_PX
+            );
         }
     }
 
